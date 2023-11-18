@@ -141,6 +141,8 @@ const you = document.querySelector("#you");
 const result = document.querySelector("#result");
 const buttons = document.querySelectorAll('button');
 
+const section = document.querySelector('#section')
+
 let youChoice;
 let computerChoice;
 let resultMessage;
@@ -167,10 +169,14 @@ const playGame = (e) => {
     }
 
     result.textContent = resultMessage;
+    let random1 = Math.floor(Math.random()*255)
+    let random2 = Math.floor(Math.random()*255)
+    let random3 = Math.floor(Math.random()*255)
+    console.log(random1,random2,random3);
+    section.style.backgroundColor = `rgb(${random1},${random2},${random3})`
+
 };
 
 buttons.forEach((button) => button.addEventListener('click', playGame));
 
 
-
-console.log(computer);

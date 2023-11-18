@@ -173,4 +173,4 @@ buttons.forEach((button) => button.addEventListener('click', playGame));
 
 
 
-
+console.log(computer);
